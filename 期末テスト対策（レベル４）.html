@@ -1,0 +1,129 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>読解練習（期末テストへ向けて）</title><style>
+:root{font-family:system-ui,'Noto Sans JP',sans-serif;color:#142d42;background:#eaf3f8}*{box-sizing:border-box}body{margin:0}.app{max-width:1250px;margin:0 auto;padding:18px 25px 32px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-size:26px;font-weight:900;color:#155e8c}.progress{font-weight:800;font-size:18px;background:white;border-radius:100px;padding:10px 20px}.bar{height:9px;background:#d1e5f0;border-radius:20px;margin:13px 0 20px;overflow:hidden}.fill{height:100%;background:#1689c3;transition:width .3s}.card{background:white;border-radius:24px;padding:26px 34px;box-shadow:0 12px 35px #16496a18}.category{display:inline-block;background:#e5f5ff;color:#1269a3;padding:7px 16px;border-radius:30px;font-weight:900;letter-spacing:.07em}.prompt{margin:14px 0 16px;font-size:clamp(19px,2.15vw,30px);line-height:1.65;font-weight:750}.sentence{display:block;margin:3px 0}.ja{display:block;color:#bd5a21;font-size:.68em;font-weight:700;line-height:1.35;margin:-2px 0 7px 0}.hintbtn{background:#fff2c8;color:#825700;border:2px solid #f6d576;border-radius:14px;padding:10px 18px;font-weight:900;font-size:18px;cursor:pointer}.instruction{color:#536879;font-size:15px;margin:9px 0 15px}.choices{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.choice{border:3px solid #dbe7ee;background:#fff;border-radius:19px;min-height:208px;cursor:pointer;padding:13px 8px;display:flex;flex-direction:column;align-items:center;justify-content:space-around;transition:.15s}.choice:hover:not(:disabled){border-color:#5ab0df;transform:translateY(-2px)}.choice:disabled{cursor:default}.choice .word{font-size:clamp(15px,1.75vw,24px);font-weight:900;text-align:center;overflow-wrap:anywhere}.choice .icon{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;font-size:clamp(63px,8vw,112px);line-height:1.1;filter:drop-shadow(0 5px 3px #203f5317)}.choice .letter{font-size:14px;font-weight:900;color:#8299a8}.choice.correct{border-color:#19a575;background:#e7fff4}.choice.wrong{border-color:#dc5d59;background:#fff0ee}.feedback{margin-top:18px;padding:18px 21px;border-radius:16px;background:#f1f8fc;border:2px solid #d7e9f3}.feedback.good{background:#e9fff4;border-color:#95e3c0}.feedback.bad{background:#fff2ed;border-color:#f0b5a5}.verdict{font-size:26px;font-weight:950}.why{font-size:17px;line-height:1.7}.evidence{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.pill{background:white;border:1px solid #c6dfe8;border-radius:12px;padding:7px 11px;font-weight:750}.pill small{display:block;color:#b65d27}.next{margin-top:15px;background:#126fa7;border:0;color:white;font-size:21px;font-weight:900;padding:14px 25px;border-radius:15px;cursor:pointer}.bottom{display:flex;justify-content:space-between;align-items:center;margin-top:14px;color:#5d7888;font-size:14px}.end{text-align:center;padding:70px 20px}.end h1{font-size:44px}.end p{font-size:27px}.end button{background:#126fa7;color:white;padding:17px 28px;border:0;border-radius:14px;font-size:20px;font-weight:800;cursor:pointer}@media(max-width:760px){.app{padding:12px}.card{padding:16px}.choices{grid-template-columns:repeat(2,1fr);gap:10px}.choice{min-height:155px}.choice .icon{font-size:65px}.prompt{font-size:20px}.logo{font-size:20px}.choice .word{font-size:18px}}
+.travel{display:flex;justify-content:center;align-items:center;gap:22px;background:#f0f8fd;border-radius:16px;margin:16px 0;padding:12px}.travel-flag{font-size:clamp(52px,7vw,90px)}.travel-arrow{font-size:clamp(24px,4vw,45px)}.vocab{margin:9px 0 14px;padding:10px 14px;background:#f5f7fb;border-left:4px solid #8aa7c4;border-radius:8px;font-size:clamp(15px,1.6vw,19px);display:flex;flex-wrap:wrap;gap:10px 18px}.vocab-item{font-weight:650}.try-again{margin-top:18px;padding:15px;border:2px solid #e78c84;background:#fff0ee;border-radius:15px;color:#b62d27;font-size:clamp(18px,2.4vw,28px);font-weight:900;text-align:center}
+.choice.wrong{border:5px solid #d52b2b!important;background:#ffd5d5!important;opacity:.78}
+.explanation{text-align:center}.answer-heading{font-size:clamp(30px,4vw,52px);color:#128358;margin:16px 0}
+.answer-hero{display:flex;flex-direction:column;align-items:center;gap:12px;background:#ecf9ff;border-radius:24px;padding:24px;margin:15px auto;max-width:700px}
+.answer-icon{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;font-size:clamp(100px,15vw,190px);line-height:1.2}
+.answer-word{font-size:clamp(32px,5vw,62px);font-weight:900;color:#155e8c}
+.evidence-title{font-size:clamp(20px,2.5vw,30px);margin-top:25px}
+.explanation .evidence{justify-content:center}.explanation .next{margin-top:25px}
+.schedule-choice{justify-content:flex-start;gap:7px;min-height:235px;padding:10px 6px}.schedule-step{display:flex;align-items:center;justify-content:space-between;width:100%;gap:8px;border-bottom:1px dashed #d9e2e9;padding:4px 8px}.schedule-step:last-child{border:0}.schedule-emoji{font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;font-size:clamp(28px,3.8vw,52px)}.schedule-time{font-size:clamp(18px,2.2vw,30px);font-weight:900;font-variant-numeric:tabular-nums;color:#1a4e6d}.schedule-choice .letter{align-self:flex-start;padding-left:10px}.answer-hero .schedule-step{max-width:400px;padding:9px 18px}.answer-hero .schedule-emoji{font-size:52px}.answer-hero .schedule-time{font-size:34px}@media(max-width:760px){.schedule-emoji{font-size:30px}.schedule-time{font-size:18px}.schedule-choice{min-height:175px}.schedule-step{gap:2px;padding:5px 2px}}
+
+.country-choice{padding:5px;min-height:235px}.country-choice .country-graphic{width:100%;max-width:260px;display:block}.country-choice .word{font-size:16px}.country-choice .letter{align-self:flex-start;padding-left:9px}.country-graphic svg{display:block;width:100%;height:auto}
+.schedule-choice{padding:10px;gap:8px;min-height:190px}.schedule-step{border:0;padding:2px;gap:3px}.activity-illustration{width:145px;height:110px;flex-shrink:1}.activity-illustration svg{width:100%;height:100%;display:block}.schedule-time{background:#222;color:#e8f3ff!important;border:3px solid #777;border-radius:9px;font-family:monospace;padding:5px 6px;font-size:clamp(16px,2vw,25px);letter-spacing:1px;white-space:nowrap}.answer-hero .activity-illustration{width:140px;height:105px}.answer-hero .schedule-step{max-width:450px}.answer-hero .country-graphic{width:min(100%,520px)}
+@media(max-width:760px){.activity-illustration{width:105px;height:80px}.schedule-time{font-size:15px;padding:3px}.country-choice{min-height:175px}.schedule-choice{min-height:175px}}
+</style></head><body><main class="app"><header class="top"><div class="logo">読解練習（期末テストへ向けて） · Level 4</div><div id="counter" class="progress">1 / 15</div></header><div class="bar"><div id="fill" class="fill"></div></div><div id="screen"></div><footer class="bottom"><span>Read → Hint (optional) → Choose → Explanation</span><span>Grade 7 · Level 4 · 15 questions</span></footer></main><script>
+const QUESTIONS=[{"cat":"Food","lines":[[["It is a Japanese noodle dish.","それは日本の麺料理です。"]],[["You can make it with noodles and soup.","あなたはそれを麺とスープで作ることができます。"]],[["You can eat it with eggs.","あなたはそれを卵と一緒に食べることができます。"]],[["What is this food?","これは何の食べ物ですか。"]]],"opts":[{"name":"sushi","icon":"🍣"},{"name":"curry rice","icon":"🍛"},{"name":"ramen","icon":"🍜"},{"name":"tempura","icon":"🍤"}],"ans":2,"notes":"麺とスープを使い、卵をのせることもある料理はラーメンです。","keys":["noodle dish","noodles and soup","with eggs"],"vocab":[["soup","スープ"]]},{"cat":"Daily Life","lines":[[["I go home at 4:30.","私は4:30に家に帰ります。"]],[["I watch TV at 5:00.","私は5:00にテレビを見ます。"]],[["I eat dinner at 6:30.","私は6:30に夕食を食べます。"]],[["I take a bath at 8:00.","私は8:00にお風呂に入ります。"]],[["I go to bed at 9:00.","私は9:00に寝ます。"]]],"opts":[{"name":"A","icon":"🕒"},{"name":"B","icon":"🕒"},{"name":"C","icon":"🕒"},{"name":"D","icon":"🕒"}],"ans":2,"notes":"英文の中にある「watch TV at 5:00」と、イラストの動作・時刻が一致しています。","keys":[],"vocab":[],"scheduleOpts":[[{"act":"read a book","time":"5:00"}],[{"act":"practice the piano","time":"5:00"}],[{"act":"watch TV","time":"5:00","icon":"📺"}],[{"act":"get up","time":"5:00"}]],"schedule":true},{"cat":"Animal","lines":[[["I am a big animal.","私は大きな動物です。"]],[["I am popular in the world.","私は世界中で人気があります。"]],[["I eat leaves.","私は葉を食べます。"]],[["I am black and white.","私は白と黒です。"]],[["I can climb trees.","私は木に登ることができます。"]]],"opts":[{"name":"whale","icon":"🐋"},{"name":"panda","icon":"🐼"},{"name":"zebra","icon":"🦓"},{"name":"koala","icon":"🐨"}],"ans":1,"notes":"葉を食べ、白黒の体で木に登れる動物はパンダです。","keys":["big animal","eat leaves","black and white","climb trees"],"vocab":[["leaves","葉"],["climb","登る"]]},{"cat":"Sports","lines":[[["I play it in a gym.","私はそれを体育館でします。"]],[["I use a ball and a high net.","私はボールと高いネットを使います。"]],[["Six players are on one team.","1チームには6人の選手がいます。"]],[["What sport is it?","それは何のスポーツですか。"]]],"opts":[{"name":"basketball","icon":"🏀"},{"name":"volleyball","icon":"🏐"},{"name":"baseball","icon":"⚾"},{"name":"tennis","icon":"🎾"}],"ans":1,"notes":"高いネットをはさみ、通常6人で行うスポーツはバレーボールです。","keys":["in a gym","high net","Six players"],"vocab":[["high net","高いネット"]]},{"cat":"Jobs","lines":[[["I help people in danger.","私は危険な状況にいる人々を助けます。"]],[["I put out fires.","私は火を消します。"]],[["I ride in a red truck.","私は赤いトラックに乗ります。"]],[["What is my job?","私の仕事は何ですか。"]]],"opts":[{"name":"police officer","icon":"👮"},{"name":"firefighter","icon":"🧑‍🚒"},{"name":"chef","icon":"🧑‍🍳"},{"name":"farmer","icon":"🧑‍🌾"}],"ans":1,"notes":"火事を消し、人を助ける職業は消防士です。","keys":["help people in danger","put out fires","red truck"],"vocab":[["put out","消す"],["in danger","危険にさらされて"]]},{"cat":"Countries","lines":[[["I'm from Australia.","私はAustralia出身です。"]],[["I live in India now.","私は今Indiaに住んでいます。"]]],"opts":[{"name":"Canada","icon":"🇨🇦"},{"name":"Japan","icon":"🇯🇵"},{"name":"India","icon":"🇮🇳"},{"name":"America","icon":"🇺🇸"}],"ans":2,"notes":"出身はAustraliaですが、今住んでいるのはIndiaです。","keys":[],"vocab":[],"travel":{"from":"Australia","to":"India"}},{"cat":"Daily Life","lines":[[["I get up at 6:00.","私は6:00に起きます。"]],[["I go to school at 7:30.","私は7:30に学校へ行きます。"]],[["I go home at 4:00.","私は4:00に家に帰ります。"]],[["I practice the piano at 5:00.","私は5:00にピアノを練習します。"]],[["I read a book at 8:30.","私は8:30に本を読みます。"]]],"opts":[{"name":"A","icon":"🕒"},{"name":"B","icon":"🕒"},{"name":"C","icon":"🕒"},{"name":"D","icon":"🕒"}],"ans":1,"notes":"英文の中にある「go home at 4:00」と、イラストの動作・時刻が一致しています。","keys":[],"vocab":[],"scheduleOpts":[[{"act":"eat breakfast","time":"4:00"}],[{"act":"go home","time":"4:00","icon":"🏠"}],[{"act":"go to school","time":"4:00"}],[{"act":"eat dinner","time":"4:00"}]],"schedule":true},{"cat":"Food","lines":[[["It is a Japanese sweet.","それは日本のお菓子です。"]],[["It is soft and sticky.","それはやわらかくて、もちもちしています。"]],[["You can make it with rice.","米を使って作ることができます。"]],[["What is this food?","これは何の食べ物ですか。"]]],"opts":[{"name":"cookie","icon":"🍪"},{"name":"ice cream","icon":"🍨"},{"name":"mochi","icon":"🍡"},{"name":"cake","icon":"🍰"}],"ans":2,"notes":"英文の特徴に合うのはmochiです。","keys":[],"vocab":[["sticky","ねばねばした、くっつく"]]},{"cat":"Animal","lines":[[["I am a big animal.","私は大きな動物です。"]],[["I have a long nose.","私には長い鼻があります。"]],[["I live in Africa and Asia.","私はアフリカやアジアに住んでいます。"]]],"opts":[{"name":"lion","icon":"🦁"},{"name":"elephant","icon":"🐘"},{"name":"panda","icon":"🐼"},{"name":"horse","icon":"🐴"}],"ans":1,"notes":"長い鼻が特徴の動物はゾウです。","keys":[],"vocab":[]},{"cat":"Daily Life","lines":[[["I get up at 6:30.","私は6:30に起きます。"]],[["I eat breakfast at 7:00.","私は7:00に朝食を食べます。"]],[["After that, I go to school at 7:30.","その後、私は7:30に学校へ行きます。"]],[["I go home at 4:00.","私は4:00に家に帰ります。"]],[["I read a book at 8:00.","私は8:00に本を読みます。"]]],"opts":[{"name":"A","icon":"🕒"},{"name":"B","icon":"🕒"},{"name":"C","icon":"🕒"},{"name":"D","icon":"🕒"}],"ans":2,"notes":"「I go home at 4:00.」と、絵の動作・時刻が一致しています。","keys":[],"vocab":[["After","～の後に、その後"]],"scheduleOpts":[[{"act":"go to bed","time":"4:00"}],[{"act":"watch TV","time":"4:00"}],[{"act":"go home","time":"4:00"}],[{"act":"eat dinner","time":"4:00"}]],"schedule":true},{"cat":"Sports","lines":[[["I play it on ice.","私は氷の上でそれをします。"]],[["I wear special shoes.","私は特別な靴を履きます。"]],[["I use a stick and a small black puck.","私はスティックと小さな黒いパックを使います。"]],[["Six players are on one team.","1チームは6人です。"]],[["What sport is it?","それは何のスポーツですか。"]]],"opts":[{"name":"ice hockey","icon":"🏒"},{"name":"tennis","icon":"🎾"},{"name":"volleyball","icon":"🏐"},{"name":"baseball","icon":"⚾"}],"ans":0,"notes":"氷上でスティックとパックを使う競技はアイスホッケーです。","keys":[],"vocab":[["puck","パック"],["special","特別な"]]},{"cat":"Jobs","lines":[[["I work at an airport.","私は空港で働きます。"]],[["I help people travel to other countries.","私は人々がほかの国へ旅行するのを手伝います。"]],[["I fly a large plane.","私は大きな飛行機を操縦します。"]],[["I sometimes work at night.","私はときどき夜に働きます。"]],[["What is my job?","私の仕事は何ですか。"]]],"opts":[{"name":"pilot","icon":"👨‍✈️"},{"name":"chef","icon":"👨‍🍳"},{"name":"firefighter","icon":"👨‍🚒"},{"name":"teacher","icon":"👩‍🏫"}],"ans":0,"notes":"飛行機を操縦する仕事はパイロットです。","keys":[],"vocab":[["airport","空港"],["fly a plane","飛行機を操縦する"]]},{"cat":"Countries","lines":[[["I'm from Canada.","私はCanada出身です。"]],[["I live in China now.","私は今Chinaに住んでいます。"]]],"opts":[{"name":"America","icon":"🇺🇸"},{"name":"Australia","icon":"🇦🇺"},{"name":"China","icon":"🇨🇳"},{"name":"Japan","icon":"🇯🇵"}],"ans":2,"notes":"出身はCanadaですが、今住んでいるのはChinaです。","keys":[],"vocab":[],"travel":{"from":"Canada","to":"China"}},{"cat":"Daily Life","lines":[[["I get up at 6:00.","私は6:00に起きます。"]],[["I go to school at 7:30.","私は7:30に学校へ行きます。"]],[["After that, I go home at 4:30.","その後、私は4:30に家に帰ります。"]],[["I practice the piano at 5:00.","私は5:00にピアノを練習します。"]],[["I take a bath at 8:30.","私は8:30にお風呂に入ります。"]]],"opts":[{"name":"A","icon":"🕒"},{"name":"B","icon":"🕒"},{"name":"C","icon":"🕒"},{"name":"D","icon":"🕒"}],"ans":2,"notes":"「I practice the piano at 5:00.」と、絵の動作・時刻が一致しています。","keys":[],"vocab":[["After","～の後に、その後"]],"scheduleOpts":[[{"act":"watch TV","time":"5:00"}],[{"act":"eat dinner","time":"5:00"}],[{"act":"practice the piano","time":"5:00"}],[{"act":"read a book","time":"5:00"}]],"schedule":true},{"cat":"Daily Life","lines":[[["I eat breakfast at 7:00.","私は7:00に朝食を食べます。"]],[["I go to school at 8:00.","私は8:00に学校へ行きます。"]],[["After that, I go home at 4:00.","その後、私は4:00に家に帰ります。"]],[["I do my homework at 5:00.","私は5:00に宿題をします。"]],[["I go to bed at 9:30.","私は9:30に寝ます。"]]],"opts":[{"name":"A","icon":"🕒"},{"name":"B","icon":"🕒"},{"name":"C","icon":"🕒"},{"name":"D","icon":"🕒"}],"ans":2,"notes":"「I do my homework at 5:00.」と、絵の動作・時刻が一致しています。","keys":[],"vocab":[["After","～の後に、その後"]],"scheduleOpts":[[{"act":"watch TV","time":"5:00"}],[{"act":"practice the piano","time":"5:00"}],[{"act":"do my homework","time":"5:00"}],[{"act":"take a bath","time":"5:00"}]],"schedule":true}];
+let current=0,score=0,hint=false,answered=false,wrongChoices=new Set();
+const screen=document.getElementById('screen');
+function el(tag,cls,txt){const e=document.createElement(tag);if(cls)e.className=cls;if(txt!==undefined)e.textContent=txt;return e;}
+
+const FLAG={Australia:'🇦🇺',Japan:'🇯🇵',America:'🇺🇸',Canada:'🇨🇦',China:'🇨🇳',India:'🇮🇳'};
+const SCENE={Australia:['🦘','Sydney'],Japan:['🗻','Tokyo'],America:['🗽','New York'],Canada:['🍁','Canada'],China:['🐼','Great Wall'],India:['🕌','India']};
+function countryArt(from,to){
+ const f=SCENE[from]||['🌏',from],t=SCENE[to]||['🌏',to];
+ const wrap=el('div','country-graphic');
+ wrap.innerHTML=`<svg viewBox="0 0 320 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${from} から ${to} へ引っ越すイラスト">
+ <rect x="2" y="2" width="316" height="186" rx="14" fill="#f4fbff" stroke="#c9e4ee" stroke-width="2"/>
+ <rect x="14" y="12" width="105" height="47" rx="6" fill="white" stroke="#b4c7d1"/><text x="66" y="47" text-anchor="middle" font-size="35">${FLAG[from]}</text>
+ <rect x="201" y="12" width="105" height="47" rx="6" fill="white" stroke="#b4c7d1"/><text x="254" y="47" text-anchor="middle" font-size="35">${FLAG[to]}</text>
+ <path d="M98 95 Q160 32 227 95" stroke="#227cb1" stroke-width="4" fill="none" stroke-dasharray="8 6"/><path d="M222 83 L236 99 L217 97" fill="#227cb1"/>
+ <text x="158" y="79" font-size="29" text-anchor="middle">✈️</text>
+ <text x="65" y="139" font-size="55" text-anchor="middle">${f[0]}</text><text x="256" y="139" font-size="55" text-anchor="middle">${t[0]}</text>
+ <text x="160" y="148" font-size="44" text-anchor="middle">🧑</text>
+ <text x="67" y="176" font-size="17" font-weight="bold" text-anchor="middle" fill="#25475c">${from}</text><text x="255" y="176" font-size="17" font-weight="bold" text-anchor="middle" fill="#25475c">${to}</text>
+ </svg>`;return wrap;
+}
+const OBJECTS={
+ 'get up':['🛏️','🌞'],'eat breakfast':['🍞','🥛'],'go to school':['🎒','🏫'],'go home':['🏠','🎒'],'eat dinner':['🍚','🥢'],'do my homework':['📖','✏️'],'take a bath':['🛁','🫧'],'go to bed':['🛏️','🌙'],'read a book':['📘','📚'],'watch TV':['📺','🎬'],'practice the piano':['🎹','🎵']
+};
+function activityArt(act){
+ const [a,b]=OBJECTS[act]||['⭐','📝'];let box=el('div','activity-illustration');
+ box.innerHTML=`<svg viewBox="0 0 140 105" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${act} のイラスト">
+ <rect x="1" y="1" width="138" height="103" rx="10" fill="#fff8e9" stroke="#eee2ca"/>
+ <ellipse cx="69" cy="91" rx="53" ry="6" fill="#e6d8c8"/>
+ <path d="M48 85 L48 62 Q69 50 90 62 L90 85" fill="#f2bb56" stroke="#735d53" stroke-width="2"/>
+ <circle cx="69" cy="40" r="22" fill="#ffd5b1" stroke="#735d53" stroke-width="2"/>
+ <path d="M48 39 Q47 12 69 15 Q91 12 91 39 L85 29 Q72 31 62 23 Q57 34 48 39" fill="#414046"/>
+ <circle cx="61" cy="42" r="2" fill="#3e3838"/><circle cx="77" cy="42" r="2" fill="#3e3838"/><path d="M63 52 Q69 57 75 52" fill="none" stroke="#a46c64" stroke-width="2"/>
+ <text x="25" y="82" font-size="31" text-anchor="middle">${a}</text><text x="113" y="82" font-size="28" text-anchor="middle">${b}</text>
+ </svg>`;return box;
+}
+function addScheduleStep(container,step){const r=el('div','schedule-step');r.append(activityArt(step.act));r.append(el('span','schedule-time',step.time));container.append(r);}
+
+function render(){
+ document.getElementById('counter').textContent=`${Math.min(current+1,QUESTIONS.length)} / ${QUESTIONS.length}`;
+ document.getElementById('fill').style.width=(current/QUESTIONS.length*100)+'%';
+ if(current>=QUESTIONS.length){end();return;}
+ const q=QUESTIONS[current];screen.replaceChildren();const card=el('section','card');screen.append(card);
+ const category=el('div','category',`QUESTION ${current+1} · ${q.cat.toUpperCase()}`);card.append(category);
+ const prompt=el('div','prompt');card.append(prompt);
+ q.lines.forEach(line=>{const s=el('div','sentence');line.forEach(([en,ja])=>{const t=el('span','en',en);s.append(t);if(hint&&ja){s.append(el('span','ja',ja));}});prompt.append(s);});
+ if(q.vocab && q.vocab.length){const vocab=el('div','vocab');vocab.append(el('strong','','（注）'));q.vocab.forEach(([en,ja])=>vocab.append(el('span','vocab-item',en+'：'+ja)));card.append(vocab);}
+ const hintBtn=el('button','hintbtn',hint?'💡 Hide Hints / ヒントを隠す':'💡 Hint / ヒント');hintBtn.type='button';hintBtn.addEventListener('click',()=>{hint=!hint;render();});card.append(hintBtn);
+ card.append(el('p','instruction',q.schedule?'Choose the picture that matches one sentence. / 英文のどれか１文と合うイラストを選ぼう。':'Choose one illustration. / イラストを１つ選ぼう。'));
+ const choices=el('div','choices');card.append(choices);
+ q.opts.forEach((opt,i)=>{const b=el('button','choice'+(wrongChoices.has(i)?' wrong':'')+(q.schedule?' schedule-choice':''));b.type='button';if(wrongChoices.has(i))b.disabled=true;b.append(el('div','letter',String.fromCharCode(65+i)));if(q.schedule){q.scheduleOpts[i].forEach(step=>addScheduleStep(b,step));}else if(q.travel){b.classList.add('country-choice');b.append(countryArt(q.travel.from,opt.name));}else{b.append(el('div','word',opt.name));b.append(el('div','icon',opt.icon));}b.addEventListener('click',()=>answer(i));choices.append(b);});
+}
+
+let soundCtx=null;
+function playFeedbackSound(correct){
+ try{
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  if(!soundCtx)soundCtx=new AC();
+  if(soundCtx.state==='suspended')soundCtx.resume();
+  const t=soundCtx.currentTime;
+  const tone=(freq,start,duration,type,volume,endFreq)=>{
+   const osc=soundCtx.createOscillator(),gain=soundCtx.createGain();
+   osc.type=type;osc.frequency.setValueAtTime(freq,start);
+   if(endFreq)osc.frequency.exponentialRampToValueAtTime(endFreq,start+duration);
+   gain.gain.setValueAtTime(.0001,start);
+   gain.gain.exponentialRampToValueAtTime(volume,start+.015);
+   gain.gain.exponentialRampToValueAtTime(.0001,start+duration);
+   osc.connect(gain);gain.connect(soundCtx.destination);osc.start(start);osc.stop(start+duration+.015);
+  };
+  if(correct){tone(660,t,.15,'sine',.14,880);tone(988,t+.13,.32,'sine',.16,1320);}
+  else{tone(190,t,.28,'sawtooth',.075,105);tone(135,t+.03,.24,'triangle',.08,90);}
+ }catch(e){}
+}
+
+function answer(i){
+ if(answered || wrongChoices.has(i))return;
+ const q=QUESTIONS[current];
+ if(i!==q.ans){
+   playFeedbackSound(false);
+   wrongChoices.add(i);
+   const btn=screen.querySelectorAll('.choice')[i];
+   btn.classList.add('wrong');btn.disabled=true;
+   let msg=screen.querySelector('.try-again');
+   if(!msg){msg=el('div','try-again','NO!');screen.querySelector('.card').append(msg);}
+   return;
+ }
+ playFeedbackSound(true);
+ answered=true;score++;
+ showExplanation();
+}
+function showExplanation(){
+ const q=QUESTIONS[current];screen.replaceChildren();
+ const card=el('section','card explanation');screen.append(card);
+ card.append(el('div','category',`QUESTION ${current+1} · ANSWER`));
+ card.append(el('h1','answer-heading','⭕ Correct! / 正解！'));
+ const answerCard=el('div','answer-hero');
+ if(q.schedule){q.scheduleOpts[q.ans].forEach(step=>addScheduleStep(answerCard,step));}else if(q.travel){answerCard.append(countryArt(q.travel.from,q.travel.to));}else{answerCard.append(el('div','answer-icon',q.opts[q.ans].icon));answerCard.append(el('div','answer-word',q.opts[q.ans].name));}
+ card.append(answerCard);
+ card.append(el('p','why',q.notes));
+ card.append(el('h2','evidence-title','🔍 Key Clues / 答えの根拠'));
+ const evidence=el('div','evidence');
+ q.lines.forEach(line=>line.forEach(([en,ja])=>{if(ja){const pill=el('div','pill',en);pill.append(el('small','',ja));evidence.append(pill);}}));
+ card.append(evidence);
+ const next=el('button','next',current===QUESTIONS.length-1?'See Results →':'Next Question →');
+ next.addEventListener('click',()=>{current++;answered=false;hint=false;wrongChoices.clear();render();window.scrollTo({top:0,behavior:'smooth'});});
+ card.append(next);
+ document.getElementById('fill').style.width=((current+1)/QUESTIONS.length*100)+'%';
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+function end(){screen.replaceChildren();const box=el('section','card end');box.append(el('h1','', '🎉 Great Job!'));box.append(el('p','',`Score: ${score} / ${QUESTIONS.length}`));const b=el('button','','Play Again / もう一度');b.addEventListener('click',()=>{current=0;score=0;hint=false;answered=false;wrongChoices.clear();render();});box.append(b);screen.append(box);}
+render();
+</script></body></html>
